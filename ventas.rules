@@ -65,7 +65,7 @@
     {
       "name": "Unidad de medida",
       "type": "string",
-      "allowedValues": ["TON", "KG", "EACH"],
+      "allowedValues": ["TON", "KG", "EACH","UNIT"],
       "required": true
     },
     {
