@@ -2,7 +2,7 @@
   "ruleSetName": "ventas",
   "fileExtension": ".csv",
   "delimiter": ",",
-  "hasHeader": false,
+  "hasHeader": true,
   "fields": [
     {
       "name": "Fecha de factura",
