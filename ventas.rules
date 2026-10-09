@@ -1,0 +1,80 @@
+{
+  "ruleSetName": "ventas",
+  "fileExtension": ".csv",
+  "delimiter": ",",
+  "hasHeader": false,
+  "fields": [
+    {
+      "name": "Fecha de factura",
+      "required": true,
+      "unique": false,
+      "regex": "^(19|20)\\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])$"
+    },
+    {
+      "name": "Codigo del distribuidor",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-Z0-9]+$"
+    },
+    {
+      "name": "Tipo de factura",
+      "required": true,
+      "unique": false,
+      "regex": "^([1-9]|10)$"
+    },
+    {
+      "name": "Numero de factura",
+      "required": false,
+      "unique": true,
+      "regex": "^[A-Z0-9]+$"
+    },
+    {
+      "name": "Codigo de cliente (PDV)",
+      "required": false,
+      "unique": false,
+      "regex": "^\\d{1,10}$"
+    },
+    {
+      "name": "Nombre de cliente",
+      "required": false,
+      "unique": false,
+      "regex": "^[A-Z\\s]+$"
+    },
+    {
+      "name": "Codigo del SKU SAP",
+      "required": false,
+      "unique": false,
+      "regex": "^\\d+$"
+    },
+    {
+      "name": "Codigo del vendedor",
+      "required": true,
+      "unique": false,
+      "regex": "^[A-Z0-9]+$"
+    },
+    {
+      "name": "Nombre de vendedor",
+      "required": false,
+      "unique": false,
+      "regex": "^[A-Z\\s]+$"
+    },
+    {
+      "name": "Cantidad",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+$"
+    },
+    {
+      "name": "Unidad de medida",
+      "required": true,
+      "unique": false,
+      "regex": "^(TON|KG|EACH)$"
+    },
+    {
+      "name": "Valor de venta sin IVA - IGV",
+      "required": true,
+      "unique": false,
+      "regex": "^\\d+(\\.\\d{2})?$"
+    }
+  ]
+}
