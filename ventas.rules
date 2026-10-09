@@ -8,73 +8,85 @@
       "name": "Fecha de factura",
       "required": true,
       "unique": false,
-      "regex": "^(19|20)\\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])$"
+      "regex": "^(19|20)\\d\\d(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])$",
+      "description": "Formato de fecha inválido. Se espera YYYYMMDD con una fecha real."
     },
     {
       "name": "Codigo del distribuidor",
       "required": true,
       "unique": false,
-      "regex": "^[A-Z0-9]+$"
+      "regex": "^[A-Z0-9]+$",
+      "description": "El código del distribuidor debe ser alfanumérico en mayúsculas."
     },
     {
       "name": "Tipo de factura",
       "required": true,
       "unique": false,
-      "regex": "^([1-9]|10)$"
+      "regex": "^([1-9]|10)$",
+      "description": "El tipo de factura debe ser un número entero entre 1 y 10."
     },
     {
       "name": "Numero de factura",
       "required": false,
       "unique": true,
-      "regex": "^[A-Z0-9]+$"
+      "regex": "^[A-Z0-9]+$",
+      "description": "El número de factura debe ser alfanumérico y único en el archivo."
     },
     {
       "name": "Codigo de cliente (PDV)",
       "required": false,
       "unique": false,
-      "regex": "^\\d{1,10}$"
+      "regex": "^\\d+$",
+      "description": "El código de cliente debe ser un valor numérico entero."
     },
     {
       "name": "Nombre de cliente",
       "required": false,
       "unique": false,
-      "regex": "^[A-Z\\s]+$"
+      "regex": "^[A-Z\\s]+$",
+      "description": "El nombre del cliente solo debe contener letras en mayúscula y espacios."
     },
     {
       "name": "Codigo del SKU SAP",
       "required": false,
       "unique": false,
-      "regex": "^\\d+$"
+      "regex": "^\\d+$",
+      "description": "El código del SKU SAP debe ser numérico."
     },
     {
       "name": "Codigo del vendedor",
       "required": true,
       "unique": false,
-      "regex": "^[A-Z0-9]+$"
+      "regex": "^[A-Z0-9]+$",
+      "description": "El código del vendedor debe ser alfanumérico en mayúsculas."
     },
     {
       "name": "Nombre de vendedor",
       "required": false,
       "unique": false,
-      "regex": "^[A-Z\\s]+$"
+      "regex": "^[A-Z\\s]+$",
+      "description": "El nombre del vendedor solo debe contener letras en mayúscula y espacios."
     },
     {
       "name": "Cantidad",
       "required": true,
       "unique": false,
-      "regex": "^\\d+$"
+      "regex": "^\\d+$",
+      "description": "La cantidad debe ser un número entero válido."
     },
     {
       "name": "Unidad de medida",
       "required": true,
       "unique": false,
-      "regex": "^(TON|KG|EACH)$"
+      "regex": "^(TON|KG|EACH)$",
+      "description": "La unidad de medida debe ser estrictamente TON, KG o EACH."
     },
     {
       "name": "Valor de venta sin IVA - IGV",
       "required": true,
       "unique": false,
-      "regex": "^\\d+(\\.\\d{2})?$"
+      "regex": "^\\d+(\\.\\d{1,2})?$",
+      "description": "El valor de venta debe ser un número válido con hasta dos decimales."
     }
   ]
 }
