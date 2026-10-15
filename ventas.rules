@@ -1,6 +1,6 @@
 {
   "ruleSetName": "ventas",
-  "fileExtension": ".csv",
+  "fileExtension": "csv",
   "delimiter": ",",
   "hasHeader": true,
   "fields": [
